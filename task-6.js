@@ -26,9 +26,9 @@
 let input;
 let total = 0;
 
-if ((input = String())) {
-  alert('Было введено не число, попробуйте еще раз');
-}
+// if ((input = String())) {
+//   alert('Было введено не число, попробуйте еще раз');
+// }
 
 while ((input = prompt('Введите число'))) {
   input = Number(input);

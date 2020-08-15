@@ -23,19 +23,41 @@
 // 5. Если вводиться не число, показывать текст через alert: 'Было введено не число,
 // попробуйте еще раз', после этого снова предложить ввеси число.
 
+// ВАРИАНТ 1//     ВЫБРАТЬ ОДИН ИЗ ДВУХ ВАРИАНТОВ
+
 let input;
 let total = 0;
 
-// if ((input = String())) {
-//   alert('Было введено не число, попробуйте еще раз');
-// }
-
 while ((input = prompt('Введите число'))) {
   input = Number(input);
-  total += input;
-  console.log('total: ', total);
+  if (input) {
+    total += input;
+    console.log('total: ', total);
+  } else {
+    alert('Было введено не число, попробуйте еще раз');
+  }
 }
 
 if (input === null) {
   alert(`Общая сумма чисел равна ${total}`);
 }
+
+//ВАРИАНТ 2 //
+
+let input;
+let total = 0;
+
+for (; (input = prompt(`Введите число`)); ) {
+  input = Number(input);
+  if (input) {
+    total += input;
+    console.log(`total: `, total);
+  } else {
+    alert('Было введено не число, попробуйте еще раз');
+  }
+}
+if (input === null) {
+  alert(`Общая сумма чисел равна ${total}`);
+}
+
+// ВЫБРАТЬ ОДИН ИЗ ДВУХ ВАРИАНТОВ
